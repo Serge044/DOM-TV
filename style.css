@@ -1,0 +1,262 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f8d76e;
+    height: 100%;
+}
+
+.wrapper {
+    /* min-height: 900px; */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /* flex: 1 1 auto; */
+}
+
+/* tv */
+
+.container {
+    height:560px;
+    width: 600px;
+    border: 3px solid white;
+    position: absolute;
+    margin: auto;
+    top: 30px;
+    /* bottom: 0; */
+    left: 0px;
+    right: 0px;
+}
+
+.tv {
+    background-color: rgb(153, 50, 50);
+    height: 420px;
+    width: 540px;
+    position: absolute;
+    top: 115px;
+    left: 30px;
+    border-radius: 15px;
+}
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    background-color: #ce9c91;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    right: 30px;
+    outline: none;
+    cursor: pointer;
+}
+
+.speaker {
+    position: absolute;
+    top: 100px;
+    right: 14px;
+}
+
+.speaker>div {
+    background-color: rgb(75, 40, 40);
+    height: 12px;
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+}
+
+.slot {
+    background-color: rgb(75, 40, 40);
+    height: 12px;
+    width: 480px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 5px;
+    left: 30px;
+}
+
+.antenna {
+    background-color: #3d3f3d;
+    height: 25px;
+    width: 120px;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    top: -428px;
+    left: 100px;
+}
+
+.a {
+    background-color: #3d3f3d;
+    /* height: 140px; */
+    height: 80px;
+    width: 12px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.a:nth-child(1) {
+    /* bottom: 120px; */
+    bottom: 70px;
+    left: 35px;
+    transform: rotate(-30deg);
+}
+
+.a:nth-child(2) {
+    bottom: 150px;
+    left: 75px;
+    transform: rotate(30deg);
+}
+
+.stand1,.stand2 {
+    background-color: rgb(75, 40, 40);
+    height: 20px;
+    width: 36px;
+    position: absolute;
+    border-radius: 0 0 15px 15px;
+    bottom: -25px;
+}
+
+.stand1 {
+    left: 20px;
+}
+
+.stand2 {
+    right: 20px;
+}
+
+input[type="checkbox"]::before{
+    /* z-index */
+    z-index: 5;
+    content: '';
+    position: absolute;
+    background-color: #caffd01b;
+    height: 280px;
+    width: 340px;
+    bottom: -84px;
+    right: 90px;
+    border-radius: 5px;
+    border: 10px solid rgb(75, 40, 40);
+    background-size: 125px 140px;
+    background-image: linear-gradient(
+        to left,
+        #db9dff3c 25px,
+        #9dc4ff40 25px,
+        #9dc4ff4a 50px,
+        #fefc9342 50px,
+        #fefc9341 75px,
+        #fcc6704b 75px,
+        #fcc67044 100px,
+        #ff9ea843 100px,
+        #ff9ea83b 125px
+    );
+    animation: move 80s infinite linear;
+}
+@keyframes move {
+    100%{
+        background-position:  2000px 0;
+    }
+}
+input:checked[type="checkbox"]::before{
+    background-size: 100% 100%;
+    animation: none;
+    background-image: linear-gradient(
+        -45deg,
+        transparent 150px,
+        rgba(255, 255, 255, 0.098) 150px,
+        rgba(255, 255, 255, 0.108) 180px,
+        transparent 180px
+    );
+}
+
+.buttons-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background-color: #f1deab3a; */
+    height: 50px;
+    width: 360px;
+    position: absolute;
+    bottom: 15px;
+    left: 27px;
+}
+
+.button, .button1 {
+    height: 50px;
+    width: 40px;
+    background-color: #ce9c91;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.screen {
+    position: absolute;
+    background-color: #ffffff;
+    height: 280px;
+    width: 340px;
+    bottom: 68px;
+    right: 93px;
+    border-radius: 5px;
+    border: 10px solid #151515;
+    /* background-size: 125px 140px; */
+    background-image: url(images/BTTF.gif);
+    background-size: cover;
+}
+
+/* description */
+
+.about_movie {
+    display: flex;
+    flex-direction: column;
+    height: 270px;
+    width: 600px;
+    border: 3px solid violet;
+    position: absolute;
+    margin: auto;
+    top: 620px;
+    /* bottom: 30px; */
+    left: 0px;
+    right: 0px;
+}
+
+.title {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.genre {
+    font-size: 18px;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.year {
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.duration {
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.director {
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.writers {
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.stars {
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.description {
+    font-weight: 500; 
+}
