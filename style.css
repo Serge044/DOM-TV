@@ -6,7 +6,8 @@ body {
 }
 
 .wrapper {
-    min-height: 600px;
+    /* min-height: 600px;
+    max-width: 300px; */
     display: flex;
     flex-direction: column;
 }
