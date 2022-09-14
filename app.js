@@ -60,3 +60,48 @@ const movieDesc = [
     image: "images/AceVenturaPetDetective.gif",
   },
 ];
+
+// let a = document.querySelector(".title");
+
+// a.insertAdjacentHTML("beforebegin", "<h1>Hello! The movie name is:</h1>");
+
+// console.log(a);
+
+// let b = document.querySelector(".year");
+// const yearValue = b.innerHTML;
+// const fullValue = b.outerHTML;
+// console.log(yearValue);
+// console.log(fullValue);
+
+// b.innerHTML = "now its new text";
+
+// const newElem = document.createElement("div");
+// newElem.innerHTML = `<h1>Hello, ${movieDesc[0].director}</h1>`;
+// console.log(newElem);
+
+// let c = document.querySelector(".description");
+// c.prepend(newElem);
+
+// function findSCM(num1, num2) {
+//   let lowNum = Math.min(num1, num2);
+//   let highNum = Math.max(num1, num2);
+//   for (let i = highNum; i <= highNum * lowNum; i += highNum) {
+//     if (i % lowNum === 0) {
+//       return i;
+//     }
+//   }
+// }
+// function smallestCommons(arr) {
+//   let lowNum = Math.min(...arr);
+//   let highNum = Math.max(...arr);
+//   let SCM = findSCM(...arr);
+//   for (let k = lowNum; k <= highNum; k++) {
+//     if (SCM % k !== 0) {
+//       SCM = findSCM(SCM, k);
+//     }
+//   }
+//   return SCM;
+// }
+
+// console.log(smallestCommons([1, 5]));
+// console.log("a");
