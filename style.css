@@ -1,8 +1,22 @@
+@font-face {
+    font-family: FontFrom80x;
+    src: url("fonts/good_times_rg.otf") format("opentype");
+}
+
+@font-face {
+    font-family: AtarianSystem;
+    src: url("fonts/SF\ Atarian\ System.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: AtarianSystem_italic;
+    src: url("fonts/SF\ Atarian\ System\ Italic.ttf") format("opentype");
+}
+
 body {
     padding: 0;
     margin: 0;
-    background-color: #f8d76e;
-    background-image: url(images/bg_80x_2.jpg);
+    background-image: url(images/bg_805x.jpg);
     background-size: cover;
     height: 100%;
 }
@@ -10,20 +24,14 @@ body {
 p {
     padding: 0;
     margin: 0;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 li { list-style: none; }
 
 .wrapper {
-    /* min-height: 600px;
-    max-width: 300px; */
     display: flex;
     flex-direction: column;
-}
-
-main {
-    /* flex: 1 1 auto; */
 }
 
 /* tv */
@@ -31,18 +39,14 @@ main {
 .container {
     height:560px;
     width: 600px;
-    /* border: 3px solid white; */
     position: absolute;
     margin: auto;
     top: 30px;
-    /* bottom: 0; */
     left: 0px;
     right: 0px;
 }
 
 .tv {
-    background-color: rgb(153, 50, 50);
-    /* find better quality image */
     background-image: url(images/wood-texture.jpg);
     background-size: cover;
     height: 420px;
@@ -52,9 +56,10 @@ main {
     left: 30px;
     border-radius: 15px;
 }
+
 input[type="checkbox"]{
     -webkit-appearance: none;
-    background-image: url(images/wooden_btn.png);
+    background-image: url(images/wooden_btn.jpg);
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -72,7 +77,6 @@ input[type="checkbox"]{
 }
 
 .speaker>div {
-    background-color: rgb(75, 40, 40);
     background-image: url(images/speaker-textur.jpg);
     background-size: cover;
     height: 12px;
@@ -92,8 +96,7 @@ input[type="checkbox"]{
 }
 
 .antenna {
-    background-color: #3d3f3d;
-    background-image: url(images/antenna_stand.png);
+    background-image: url(images/antenna_stand2.jpg);
     height: 25px;
     width: 120px;
     border-radius: 20px 20px 0 0;
@@ -103,9 +106,7 @@ input[type="checkbox"]{
 }
 
 .a {
-    background-color: #3d3f3d;
-    background-image: url(images/antenna_stand.png);
-    /* height: 140px; */
+    background-image: url(images/antenna_stand2.jpg);
     height: 80px;
     width: 12px;
     border-radius: 6px;
@@ -113,7 +114,6 @@ input[type="checkbox"]{
 }
 
 .a:nth-child(1) {
-    /* bottom: 120px; */
     bottom: 70px;
     left: 35px;
     transform: rotate(-30deg);
@@ -126,7 +126,7 @@ input[type="checkbox"]{
 }
 
 .stand1,.stand2 {
-    background-image: url(images/antenna_stand.png);
+    background-image: url(images/antenna_stand2.jpg);
     height: 20px;
     width: 36px;
     position: absolute;
@@ -143,11 +143,9 @@ input[type="checkbox"]{
 }
 
 input[type="checkbox"]::before{
-    /* z-index */
     z-index: 5;
     content: '';
     position: absolute;
-    background-color: #caffd01b;
     height: 280px;
     width: 340px;
     bottom: -84px;
@@ -190,7 +188,6 @@ input:checked[type="checkbox"]::before{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* background-color: #f1deab3a; */
     height: 50px;
     width: 360px;
     position: absolute;
@@ -201,83 +198,73 @@ input:checked[type="checkbox"]::before{
 button {
     height: 50px;
     width: 40px;
-    background-image: url(images/wooden_btn.png);
+    background-image: url(images/wooden_btn.jpg);
     cursor: pointer;
+    font-family: FontFrom80x;
+    font-size: 15px;
     text-align: center;
     border-radius: 5px;
 }
 
-/* .screen {
-    position: absolute;
-    background-color: #ffffff;
-    height: 280px;
-    width: 340px;
-    bottom: 68px;
-    right: 93px;
-    border-radius: 5px;
-    border: 10px solid #151515;
-    background-size: 125px 140px;
-    background-image: url(images/BTTF.gif);
-    background-size: cover;
-} */
+.button:hover {
+    transition: 0.25s;
+    background-image: url(images/antenna_stand2.jpg);
+    color: whitesmoke;
+}
 
-/* description */
+/* movies description */
 
 .movies {
     display: flex;
     flex-direction: column;
     height: 300px;
     width: 540px;
-    /* border: 3px solid violet; */
     position: absolute;
     margin: auto;
     top: 620px;
-    /* bottom: 30px; */
     left: 0px;
     right: 0px;
-    /* background-image: url(images/newspaper_background.png); */
 }
 
 .title {
-    font-size: 30px;
+    font-family: FontFrom80x;
+    font-size: 27px;
     text-transform: uppercase;
-    font-weight: bold;
 }
 
 .genre {
-    font-size: 20px;
-    font-weight: 700;
+    font-family: AtarianSystem;
+    font-size: 23px;
 }
 
 .year {
-    font-size: 17px;
-    font-weight: 600;
+    font-family: AtarianSystem;
+    font-size: 21px;
 }
 
 .duration {
-    font-size: 17px;
-    font-weight: 600;
+    font-family: AtarianSystem;
+    font-size: 21px;
 }
 
 .director {
-    font-size: 17px;
-    font-weight: 600;
+    font-family: AtarianSystem;
+    font-size: 21px;
 }
 
 .writers {
-    font-size: 17px;
-    font-weight: 600;
+    font-family: AtarianSystem;
+    font-size: 21px;
 }
 
 .stars {
-    font-size: 17px;
-    font-weight: 600;
+    font-family: AtarianSystem;
+    font-size: 21px;
 }
 
 .description {
-    font-size: 17px;
-    font-weight: 900;
-    font-style: italic;
+    font-family: AtarianSystem_italic;
+    font-size: 21px;
 }
 
 #image {
