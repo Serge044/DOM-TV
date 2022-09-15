@@ -2,8 +2,18 @@ body {
     padding: 0;
     margin: 0;
     background-color: #f8d76e;
+    background-image: url(images/bg_80x_2.jpg);
+    background-size: cover;
     height: 100%;
 }
+
+p {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+li { list-style: none; }
 
 .wrapper {
     /* min-height: 600px;
@@ -21,7 +31,7 @@ main {
 .container {
     height:560px;
     width: 600px;
-    border: 3px solid white;
+    /* border: 3px solid white; */
     position: absolute;
     margin: auto;
     top: 30px;
@@ -32,6 +42,9 @@ main {
 
 .tv {
     background-color: rgb(153, 50, 50);
+    /* find better quality image */
+    background-image: url(images/wood-texture.jpg);
+    background-size: cover;
     height: 420px;
     width: 540px;
     position: absolute;
@@ -41,7 +54,7 @@ main {
 }
 input[type="checkbox"]{
     -webkit-appearance: none;
-    background-color: #ce9c91;
+    background-image: url(images/wooden_btn.png);
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -60,6 +73,8 @@ input[type="checkbox"]{
 
 .speaker>div {
     background-color: rgb(75, 40, 40);
+    background-image: url(images/speaker-textur.jpg);
+    background-size: cover;
     height: 12px;
     width: 100px;
     margin-bottom: 10px;
@@ -67,7 +82,7 @@ input[type="checkbox"]{
 }
 
 .slot {
-    background-color: rgb(75, 40, 40);
+    background-color: black;
     height: 12px;
     width: 480px;
     border-radius: 8px;
@@ -78,6 +93,7 @@ input[type="checkbox"]{
 
 .antenna {
     background-color: #3d3f3d;
+    background-image: url(images/antenna_stand.png);
     height: 25px;
     width: 120px;
     border-radius: 20px 20px 0 0;
@@ -88,6 +104,7 @@ input[type="checkbox"]{
 
 .a {
     background-color: #3d3f3d;
+    background-image: url(images/antenna_stand.png);
     /* height: 140px; */
     height: 80px;
     width: 12px;
@@ -109,7 +126,7 @@ input[type="checkbox"]{
 }
 
 .stand1,.stand2 {
-    background-color: rgb(75, 40, 40);
+    background-image: url(images/antenna_stand.png);
     height: 20px;
     width: 36px;
     position: absolute;
@@ -136,7 +153,7 @@ input[type="checkbox"]::before{
     bottom: -84px;
     right: 90px;
     border-radius: 5px;
-    border: 10px solid rgb(75, 40, 40);
+    border: 10px solid black;
     background-size: 125px 140px;
     background-image: linear-gradient(
         to left,
@@ -163,8 +180,8 @@ input:checked[type="checkbox"]::before{
     background-image: linear-gradient(
         -45deg,
         transparent 150px,
-        rgba(255, 255, 255, 0.098) 150px,
-        rgba(255, 255, 255, 0.108) 180px,
+        rgba(255, 255, 255, 0.144) 150px,
+        rgba(255, 255, 255, 0.028) 180px,
         transparent 180px
     );
 }
@@ -181,16 +198,16 @@ input:checked[type="checkbox"]::before{
     left: 27px;
 }
 
-.button, .button1 {
+button {
     height: 50px;
     width: 40px;
-    background-color: #ce9c91;
+    background-image: url(images/wooden_btn.png);
     cursor: pointer;
     text-align: center;
     border-radius: 5px;
 }
 
-.screen {
+/* .screen {
     position: absolute;
     background-color: #ffffff;
     height: 280px;
@@ -199,65 +216,78 @@ input:checked[type="checkbox"]::before{
     right: 93px;
     border-radius: 5px;
     border: 10px solid #151515;
-    /* background-size: 125px 140px; */
+    background-size: 125px 140px;
     background-image: url(images/BTTF.gif);
     background-size: cover;
-}
+} */
 
 /* description */
 
-.about_movie {
+.movies {
     display: flex;
     flex-direction: column;
-    height: 270px;
-    width: 600px;
-    border: 3px solid violet;
+    height: 300px;
+    width: 540px;
+    /* border: 3px solid violet; */
     position: absolute;
     margin: auto;
     top: 620px;
     /* bottom: 30px; */
     left: 0px;
     right: 0px;
+    /* background-image: url(images/newspaper_background.png); */
 }
 
 .title {
     font-size: 30px;
     text-transform: uppercase;
     font-weight: bold;
-    padding-bottom: 10px;
 }
 
 .genre {
-    font-size: 18px;
-    padding-bottom: 10px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .year {
-    padding-bottom: 10px;
+    font-size: 17px;
     font-weight: 600;
 }
 
 .duration {
-    padding-bottom: 10px;
+    font-size: 17px;
     font-weight: 600;
 }
 
 .director {
-    padding-bottom: 10px;
+    font-size: 17px;
     font-weight: 600;
 }
 
 .writers {
-    padding-bottom: 10px;
+    font-size: 17px;
     font-weight: 600;
 }
 
 .stars {
-    padding-bottom: 10px;
+    font-size: 17px;
     font-weight: 600;
 }
 
 .description {
-    font-weight: 500; 
+    font-size: 17px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+#image {
+    position: absolute;
+    background-color: black;
+    height: 280px;
+    width: 340px;
+    bottom: 68px;
+    right: 93px;
+    border-radius: 5px;
+    border: 10px solid #151515;
+    background-size: cover;
 }

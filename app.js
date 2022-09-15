@@ -1,5 +1,8 @@
-const movieDesc = [
+const arrOfMovies = [
   {
+    id: "1",
+    image: "images/1.jpeg",
+    //     image: "images/BTTF.gif",
     title: "Back to the Future",
     genre: ["Adventure", "Comedy", "Sci-Fi"],
     year: "1985",
@@ -9,9 +12,11 @@ const movieDesc = [
     stars: ["Michael J. Fox", "Christopher Lloyd", "Lea Thompson"],
     description:
       "Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.",
-    image: "images/BTTF.gif",
   },
   {
+    id: "2",
+    image: "images/2.jpeg",
+    //     image: "images/Terminator2.gif",
     title: "Terminator 2: Judgment Day",
     genre: ["Action", "Sci-Fi"],
     year: "1991",
@@ -21,9 +26,11 @@ const movieDesc = [
     stars: ["Arnold Schwarzenegger", "Linda Hamilton", "Edward Furlong"],
     description:
       "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten-year-old son John from a more advanced and powerful cyborg.",
-    image: "images/Terminator2.gif",
   },
   {
+    id: "3",
+    image: "images/3.jpeg",
+    //     image: "images/Tremors.gif",
     title: "Tremors",
     genre: ["Comedy", "Horror"],
     year: "1990",
@@ -33,9 +40,11 @@ const movieDesc = [
     stars: ["Kevin Bacon", "Fred Ward", "Finn Carter"],
     description:
       "Natives of a small isolated town defend themselves against strange underground creatures which are killing them one by one.",
-    image: "images/Tremors.gif",
   },
   {
+    id: "4",
+    image: "images/4.jpeg",
+    //     image: "images/JurassicPark.gif",
     title: "Jurassic Park",
     genre: ["Action", "Adventure", "Sci-Fi"],
     year: "1993",
@@ -45,9 +54,11 @@ const movieDesc = [
     stars: ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
     description:
       "A pragmatic paleontologist touring an almost complete theme park on an island in Central America is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.",
-    image: "images/JurassicPark.gif",
   },
   {
+    id: "5",
+    image: "images/5.jpeg",
+    //     image: "images/AceVenturaPetDetective.gif",
     title: "Ace Ventura: Pet Detective",
     genre: ["Comedy"],
     year: "1994",
@@ -57,51 +68,71 @@ const movieDesc = [
     stars: ["Jim Carrey", "Courteney Cox", "Sean Young"],
     description:
       "A goofy detective specializing in animals goes in search of the missing mascot of the Miami Dolphins.",
-    image: "images/AceVenturaPetDetective.gif",
   },
 ];
 
-// let a = document.querySelector(".title");
+const movies = document.querySelector(".movies");
+const buttonsHolder = document.querySelector(".buttons-holder");
+const img = document.getElementById("image");
+const buttonsList = document.createDocumentFragment();
 
-// a.insertAdjacentHTML("beforebegin", "<h1>Hello! The movie name is:</h1>");
+arrOfMovies.forEach((category) => {
+  const li = document.createElement("li");
+  const button = document.createElement("button");
+  li.classList.add("menu-item");
+  button.classList.add("button");
+  button.innerText = category.id;
+  li.appendChild(button);
+  buttonsList.appendChild(li);
+});
+buttonsHolder.appendChild(buttonsList);
 
-// console.log(a);
+const title = document.createElement("p");
+title.classList.add("title");
+movies.append(title);
 
-// let b = document.querySelector(".year");
-// const yearValue = b.innerHTML;
-// const fullValue = b.outerHTML;
-// console.log(yearValue);
-// console.log(fullValue);
+const genre = document.createElement("p");
+genre.classList.add("genre");
+movies.append(genre);
 
-// b.innerHTML = "now its new text";
+const year = document.createElement("p");
+year.classList.add("year");
+movies.append(year);
 
-// const newElem = document.createElement("div");
-// newElem.innerHTML = `<h1>Hello, ${movieDesc[0].director}</h1>`;
-// console.log(newElem);
+const duration = document.createElement("p");
+duration.classList.add("duration");
+movies.append(duration);
 
-// let c = document.querySelector(".description");
-// c.prepend(newElem);
+const director = document.createElement("p");
+director.classList.add("director");
+movies.append(director);
 
-// function findSCM(num1, num2) {
-//   let lowNum = Math.min(num1, num2);
-//   let highNum = Math.max(num1, num2);
-//   for (let i = highNum; i <= highNum * lowNum; i += highNum) {
-//     if (i % lowNum === 0) {
-//       return i;
-//     }
-//   }
-// }
-// function smallestCommons(arr) {
-//   let lowNum = Math.min(...arr);
-//   let highNum = Math.max(...arr);
-//   let SCM = findSCM(...arr);
-//   for (let k = lowNum; k <= highNum; k++) {
-//     if (SCM % k !== 0) {
-//       SCM = findSCM(SCM, k);
-//     }
-//   }
-//   return SCM;
-// }
+const writers = document.createElement("p");
+writers.classList.add("writers");
+movies.append(writers);
 
-// console.log(smallestCommons([1, 5]));
-// console.log("a");
+const stars = document.createElement("p");
+stars.classList.add("stars");
+movies.append(stars);
+
+const description = document.createElement("p");
+description.classList.add("description");
+movies.append(description);
+
+function showImageAndDesc(event) {
+  if (event.target.nodeName === "BUTTON") {
+    const category = arrOfMovies.find(
+      (category) => category.id === event.target.innerText
+    );
+    img.src = category.image;
+    title.innerText = category.title;
+    genre.innerText = category.genre;
+    year.innerText = category.year;
+    duration.innerText = category.duration;
+    director.innerText = category.director;
+    writers.innerText = category.writers;
+    stars.innerText = category.stars;
+    description.innerText = category.description;
+  }
+}
+buttonsHolder.addEventListener("click", showImageAndDesc);
