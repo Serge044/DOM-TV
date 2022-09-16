@@ -1,7 +1,7 @@
 const arrOfMovies = [
   {
     id: "1",
-    image: "images/BTTF(2).gif",
+    image: "images/1.gif",
     title: "Back to the Future",
     genre: "Adventure · Comedy · Sci-Fi",
     year: "1985",
@@ -14,7 +14,7 @@ const arrOfMovies = [
   },
   {
     id: "2",
-    image: "images/T2(2).gif",
+    image: "images/2.gif",
     title: "Terminator 2: Judgment Day",
     genre: "Action · Sci-Fi",
     year: "1991",
@@ -27,7 +27,7 @@ const arrOfMovies = [
   },
   {
     id: "3",
-    image: "images/Tremors(2).gif",
+    image: "images/3.gif",
     title: "Tremors",
     genre: "Comedy · Horror",
     year: "1990",
@@ -40,7 +40,7 @@ const arrOfMovies = [
   },
   {
     id: "4",
-    image: "images/JP(2).gif",
+    image: "images/4.gif",
     title: "Jurassic Park",
     genre: "Action · Adventure · Sci-Fi",
     year: "1993",
@@ -53,7 +53,7 @@ const arrOfMovies = [
   },
   {
     id: "5",
-    image: "images/AV(2).gif",
+    image: "images/5.gif",
     title: "Ace Ventura: Pet Detective",
     genre: "Comedy",
     year: "1994",
